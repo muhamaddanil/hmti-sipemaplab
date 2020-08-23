@@ -53,7 +53,7 @@
           <li class="drop-down"><a href="">Tentang Kami</a>
             <ul>
               <li><a href="#team">Perangkat Lab</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
+              <!-- <li class="drop-down"><a href="#">Deep Drop Down</a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -61,11 +61,11 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
           </li>
           <li><a href="#services">Visi Misi</a></li>
-          <li><a href="<?php echo site_url('front/contact')?>">Kontak Kami</a></li>
+          <li><a href="<?php echo site_url('front/contact')?>">Absensi</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
