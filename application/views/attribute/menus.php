@@ -58,7 +58,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="<?php echo site_url('absenlab')?>">
           <i class="fa fa-fw fa-building"></i>
           <span>Absen Harian Lab</span></a>
       </li>
