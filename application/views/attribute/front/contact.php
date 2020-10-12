@@ -34,15 +34,20 @@
 
     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
       <!-- <form role="form" class="php-email-form"> -->
-      <?php echo form_open("front/input_absen") ?>
+      <?php echo form_open("front/input_absen", array(
+        'class' => 'php-email-form',
+        'role' => 'form'
+      )) ?>
+      <!-- <div class="php-email-form"> -->
+
+
       <div class="form-group">
 
         <label for=""><b>Pilih Asisten Laboratorium</b></label>
-        <select class="form-control" name="aslab_nama">
+        <select class="form-control" name="aslab_id">
           <option value="">.:: Pilih Asisten Laboratorium ::.</option>
           <?php foreach ($aslab as $aslab) { ?>
-            <!-- <input type="hidden" class="form-control" name="aslab_nim" value="<?php echo $aslab->aslab_nim ?>"> -->
-            <option value="<?php echo $aslab->aslab_nama ?>" selected><?php echo $aslab->aslab_nama ?></option>
+            <option value="<?php echo $aslab->aslab_id ?>" selected><?php echo $aslab->aslab_nama ?></option>
           <?php } ?>
 
         </select>
@@ -50,11 +55,10 @@
       <div class="form-group">
 
         <label for=""><b>Pilih Mahasiswa</b></label>
-        <select class="form-control" name="mahasiswa_nama">
+        <select class="form-control" name="mahasiswa_id">
           <option value="">.:: Pilih Mahasiswa ::.</option>
           <?php foreach ($mahasiswa as $mahasiswa) { ?>
-            <!-- <input type="hidden" class="form-control" name="mahasiswa_nim" value="<?php echo $mahasiswa->mahasiswa_nim ?>"> -->
-            <option value="<?php echo $mahasiswa->mahasiswa_nama ?>" selected><?php echo $mahasiswa->mahasiswa_nama ?></option>
+            <option value="<?php echo $mahasiswa->mahasiswa_id ?>" selected><?php echo $mahasiswa->mahasiswa_nim ?></option>
           <?php } ?>
 
         </select>
@@ -64,12 +68,13 @@
         <textarea class="form-control" name="absenlab_alasan" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
         <div class="validate"></div>
       </div>
-      <!-- <div class="mb-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Pesan Anda telah terkirim. Terima Kasih!</div>
-          </div> -->
+      <div class="mb-3">
+        <div class="loading">Loading</div>
+        <div class="error-message">Error sistem</div>
+        <div class="sent-message">Pesan Anda telah terkirim. Terima Kasih!</div>
+      </div>
       <div class="text-center"><button type="submit">Absen</button></div>
+      <!-- </div> -->
       <?php echo form_close(); ?>
       <!-- </form> -->
 
@@ -82,3 +87,26 @@
 </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
+<!-- <script src="<?php echo base_url() ?>assets/js/sweetalert.min.js"></script>
+<script>
+  $(function() {
+    TablesDatatables.init();
+  });
+
+  function validate() {
+    // var id = a.value;
+
+    swal({
+      title: "Are you sure?",
+      text: "You want to delete this Menu Item!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Yes, Delete it!",
+      closeOnConfirm: false
+    }, function() {
+      swal("Deleted!", "Menu Item has been Deleted.", "success");
+      $(location).attr('href', '<?php echo base_url() ?>admin/del_admin_menu/' + id);
+    });
+  }
+</script> -->

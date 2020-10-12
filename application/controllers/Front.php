@@ -43,21 +43,17 @@ class Front extends CI_Controller {
     $this->load->view("attribute/front/register");
   }
   public function input_absen() {
-    $data['mahasiswa_nama']       = $this->input->post('mahasiswa_nama');
-    $data['mahasiswa_nim']        = $this->input->post('mahasiswa_nim');
-    // $data['mahasiswa_id']        = $this->input->post('mahasiswa_id');
-    $data['aslab_nim']        = $this->input->post('aslab_nim');
-    $data['aslab_nama']        = $this->input->post('aslab_nama');
-    // $data['aslab_id']        = $this->input->post('aslab_id');
+    $data['mahasiswa_id']       = $this->input->post('mahasiswa_id');
+    $data['aslab_id']        = $this->input->post('aslab_id');
     $data['absenlab_alasan']        = $this->input->post('absenlab_alasan');
-    $this->session->set_flashdata('add', 'Berhasil Tambah Absen Laboratorium <b>' . $data['mahasiswa_nama'].'</b>');
+    $this->session->set_flashdata('add', 'Berhasil Tambah Absen Laboratorium <b>' . $data['mahasiswa_id'].'</b>');
     $this->m_absenlab->input($data);
 
     $log['log_id']      = "";
     $log['log_time']    = date('Y-m-d H:i:s');
-    $log['log_message'] = "Menambah Data Absen Laboratorium ".$data['mahasiswa_nama'];
+    $log['log_message'] = "Menambah Data Absen Laboratorium ".$data['mahasiswa_id'];
     $this->m_setting->create_log($log);
-    redirect('front/contact');
+    redirect('front/contact'); 
   }
   
 }

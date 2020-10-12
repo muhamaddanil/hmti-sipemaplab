@@ -99,6 +99,7 @@
           <thead>
             <tr>
               <th style="width: 5%;">No</th>
+              <th>Waktu Absen</th>
               <th>Nim Aslab</th>
               <th>Nama Aslab</th>
               <th>Nim Mahasiswa</th>
@@ -113,6 +114,7 @@
             <tr>
               <td><?php echo $no;?></td>
               
+              <td><?php echo $key->absenlab_time?></td>
               <td><?php echo $key->aslab_nim?></td>
               <td><?php echo $key->aslab_nama?></td>
               <td><?php echo $key->mahasiswa_nim?></td>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2020 at 06:06 PM
+-- Generation Time: Oct 12, 2020 at 03:43 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.32
 
@@ -29,11 +29,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `absenlab_tbl` (
   `absenlab_id` int(11) NOT NULL,
-  `aslab_id` int(11) NOT NULL,
   `absenlab_time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `absenlab_alasan` varchar(50) NOT NULL,
-  `mahasiswa_id` int(11) NOT NULL
+  `mahasiswa_id` int(11) NOT NULL,
+  `aslab_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `absenlab_tbl`
+--
+
+INSERT INTO `absenlab_tbl` (`absenlab_id`, `absenlab_time`, `absenlab_alasan`, `mahasiswa_id`, `aslab_id`) VALUES
+(53, '2020-08-24 13:45:15', 'halo', 2, 3),
+(54, '2020-08-24 13:48:11', 'csa', 2, 3),
+(55, '2020-08-24 13:48:15', 'csa', 2, 3),
+(56, '2020-08-24 13:48:37', 'sad', 2, 3),
+(57, '2020-08-24 13:50:48', 'scs', 2, 3),
+(58, '2020-08-24 13:56:07', 'asc', 2, 3),
+(59, '2020-08-24 13:56:25', 'sc', 2, 3),
+(60, '2020-08-24 14:00:15', 'asc', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -308,7 +322,65 @@ INSERT INTO `log_tbl` (`log_id`, `log_message`, `log_time`, `user_id`) VALUES
 (129, 'Administrator Sistem melakukan login ke sistem', '2020-08-22 18:29:56', 1),
 (130, 'Menambah Data profillab Laboratorium Sistem Informasi', '2020-08-22 19:00:59', 0),
 (131, 'Menambah Data aslab Muhamad Danil', '2020-08-22 19:28:44', 0),
-(132, 'Administrator Sistem melakukan login ke sistem', '2020-08-22 23:47:07', 1);
+(132, 'Administrator Sistem melakukan login ke sistem', '2020-08-22 23:47:07', 1),
+(133, 'Menambah Data Absen Laboratorium ', '2020-08-23 01:25:18', 0),
+(134, 'Menambah Data Absen Laboratorium ', '2020-08-23 01:29:27', 0),
+(135, 'Menambah Data Absen Laboratorium ', '2020-08-23 10:59:32', 0),
+(136, 'Menambah Data Absen Laboratorium TIYAN', '2020-08-23 10:59:38', 0),
+(137, 'Menambah Data Absen Laboratorium TIYAN', '2020-08-23 10:59:42', 0),
+(138, 'Menambah Data Absen Laboratorium Muhamad Danil', '2020-08-23 11:05:38', 0),
+(139, 'Menambah Data Absen Laboratorium TIYAN', '2020-08-23 11:06:02', 0),
+(140, 'Menambah Data Absen Laboratorium TIYAN', '2020-08-23 11:06:46', 0),
+(141, 'Menambah Data Absen Laboratorium ', '2020-08-23 11:10:52', 0),
+(142, 'Administrator Sistem melakukan login ke sistem', '2020-08-23 11:21:22', 1),
+(143, 'Administrator Sistem melakukan login ke sistem', '2020-08-24 20:15:01', 1),
+(144, 'Menambah Data Absen Laboratorium Muhamad Danil', '2020-08-24 20:20:43', 0),
+(145, 'Menambah Data Absen Laboratorium ', '2020-08-24 20:28:58', 0),
+(146, 'Menambah Data Absen Laboratorium ', '2020-08-24 20:29:08', 0),
+(147, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:08:38', 0),
+(148, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:12:32', 0),
+(149, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:03', 0),
+(150, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:05', 0),
+(151, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:07', 0),
+(152, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:08', 0),
+(153, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:08', 0),
+(154, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:09', 0),
+(155, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:09', 0),
+(156, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:09', 0),
+(157, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:12', 0),
+(158, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:12', 0),
+(159, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:12', 0),
+(160, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:13', 0),
+(161, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:13', 0),
+(162, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:19', 0),
+(163, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:19', 0),
+(164, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:19', 0),
+(165, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:20', 0),
+(166, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:13:58', 0),
+(167, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:15:07', 0),
+(168, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:16:36', 0),
+(169, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:16:52', 0),
+(170, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:16:58', 0),
+(171, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:17:11', 0),
+(172, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:27:12', 0),
+(173, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:35:34', 0),
+(174, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:35:36', 0),
+(175, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:36:02', 0),
+(176, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:36:35', 0),
+(177, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:39:30', 0),
+(178, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:41:17', 0),
+(179, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:41:52', 0),
+(180, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:43:08', 0),
+(181, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:43:42', 0),
+(182, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:43:57', 0),
+(183, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:44:08', 0),
+(184, 'Menambah Data Absen Laboratorium ', '2020-08-24 21:45:15', 0),
+(185, 'Menambah Data Absen Laboratorium 2', '2020-08-24 21:48:37', 0),
+(186, 'Menambah Data Absen Laboratorium 2', '2020-08-24 21:50:48', 0),
+(187, 'Menambah Data Absen Laboratorium 2', '2020-08-24 21:56:07', 0),
+(188, 'Menambah Data Absen Laboratorium 2', '2020-08-24 21:56:25', 0),
+(189, 'Menambah Data Absen Laboratorium 2', '2020-08-24 22:00:15', 0),
+(190, 'Mengedit Data mahasiswa Muhamad Danil', '2020-09-17 16:20:52', 0);
 
 -- --------------------------------------------------------
 
@@ -328,7 +400,7 @@ CREATE TABLE `mahasiswa_tbl` (
 --
 
 INSERT INTO `mahasiswa_tbl` (`mahasiswa_id`, `mahasiswa_nim`, `mahasiswa_nama`, `mahasiswa_angkatan`) VALUES
-(1, 'E1E117040', 'Muhamad Danil', 2017),
+(1, 'E1E117040324', 'Muhamad Danil', 2017),
 (2, 'E1E117065', 'TIYAN', 2017);
 
 -- --------------------------------------------------------
@@ -873,7 +945,11 @@ INSERT INTO `visit_tbl` (`visit_id`, `visit_date`) VALUES
 (432, '2020-08-22 00:50:08'),
 (433, '2020-08-22 18:29:50'),
 (434, '2020-08-22 23:34:30'),
-(435, '2020-08-22 23:47:03');
+(435, '2020-08-22 23:47:03'),
+(436, '2020-08-23 11:21:18'),
+(437, '2020-08-24 20:11:22'),
+(438, '2020-08-24 20:11:25'),
+(439, '2020-08-24 20:14:51');
 
 --
 -- Indexes for dumped tables
@@ -883,9 +959,7 @@ INSERT INTO `visit_tbl` (`visit_id`, `visit_date`) VALUES
 -- Indexes for table `absenlab_tbl`
 --
 ALTER TABLE `absenlab_tbl`
-  ADD PRIMARY KEY (`absenlab_id`),
-  ADD UNIQUE KEY `aslab_id` (`aslab_id`),
-  ADD UNIQUE KEY `mahasiswa_id` (`mahasiswa_id`);
+  ADD PRIMARY KEY (`absenlab_id`);
 
 --
 -- Indexes for table `aslab_tbl`
@@ -967,7 +1041,7 @@ ALTER TABLE `visit_tbl`
 -- AUTO_INCREMENT for table `absenlab_tbl`
 --
 ALTER TABLE `absenlab_tbl`
-  MODIFY `absenlab_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `absenlab_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `aslab_tbl`
@@ -1003,7 +1077,7 @@ ALTER TABLE `group_tbl`
 -- AUTO_INCREMENT for table `log_tbl`
 --
 ALTER TABLE `log_tbl`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
 
 --
 -- AUTO_INCREMENT for table `mahasiswa_tbl`
@@ -1039,7 +1113,7 @@ ALTER TABLE `user_tbl`
 -- AUTO_INCREMENT for table `visit_tbl`
 --
 ALTER TABLE `visit_tbl`
-  MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=436;
+  MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=440;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

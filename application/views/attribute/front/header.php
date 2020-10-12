@@ -50,6 +50,7 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="<?php echo site_url('front/index')?>">Home</a></li>
+          <li><a href="#services">Visi Misi</a></li>
           <li class="drop-down"><a href="">Tentang Kami</a>
             <ul>
               <li><a href="#team">Perangkat Lab</a></li>
@@ -64,7 +65,7 @@
               </li> -->
             </ul>
           </li>
-          <li><a href="#services">Visi Misi</a></li>
+          
           <li><a href="<?php echo site_url('front/contact')?>">Absensi</a></li>
 
         </ul>

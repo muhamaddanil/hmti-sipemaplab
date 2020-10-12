@@ -7,7 +7,9 @@ class M_absenlab extends CI_Model {
   
   public function fetch_data() {
     $this->db->select('*');
-    $this->db->from('absenlab_tbl');
+    $this->db->from('absenlab_tbl a');
+    $this->db->join('aslab_tbl b', 'b.aslab_id=a.aslab_id','left');
+    $this->db->join('mahasiswa_tbl c', 'c.mahasiswa_id=a.mahasiswa_id','left');
     $this->db->order_by("absenlab_id", "asc");
     $query = $this->db->get();
     if ($query->num_rows() > 0) {
